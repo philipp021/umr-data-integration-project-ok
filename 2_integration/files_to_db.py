@@ -1,4 +1,16 @@
-from email.policy import default
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+    This file takes .csv and .tsv files and dumps them into a MySQL database.
+    The credentials for MySQL and the location and names of the input files is set in global variables.
+    Each file gets imported as a pandas dataframe. Then the data type (int, float or string) is determined for each column,
+    as well as the maximum length for entries of string columns.
+    Then a SQL statement is sent to the database to create a table matching to the file.
+    In the last step, an INSERT SQL statement for each row of the dataframe is generated and sent to the databse.
+    Null representations in the input data sets can be defined in dataset_null_values. These will get replaced with the MySQL null value.
+"""
+
 import MySQLdb
 import pandas as pd
 from typing import List, Dict, Tuple
