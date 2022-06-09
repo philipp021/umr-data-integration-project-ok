@@ -26,5 +26,6 @@ integrated and cleaned data.
 
 ## Documentation
 
-All code documentation and instructions should be placed in this `README.md`;
-feel free to erase this intro text.
+Used data sets:
+IMDB title.akas.tsv.gz: https://datasets.imdbws.com/title.akas.tsv.gz (27.04.2022)
+
